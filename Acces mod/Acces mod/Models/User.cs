@@ -11,11 +11,12 @@ namespace Acces_mod.Models
      //- Age
      //- Password Username, password property-ləri olmadan user obyekti yaratmaq olmaz.
         private string _password;
+        private int _age;
         public string Username { get; set; }
         public int Age // Age propery-i mənfi ola bilməz.
         {
             get {
-                return 1;
+                return _age;
                }
             set
             {
@@ -23,7 +24,7 @@ namespace Acces_mod.Models
                 {
                     Console.WriteLine("Age menfi ola bilmez");
                 }
-
+                _age= value;
             }
         } 
         public string Password {
@@ -31,33 +32,14 @@ namespace Acces_mod.Models
             {  return _password;
             } 
             set
-            { bool a=false;
-                if (value.Length>=0 )
+            {
+                if (string.IsNullOrEmpty(value) == false && value.Length >= 8 == true && WhiteNUm(value)==true)
                 {
-                    for (int i = 0; i <value.Length; i++)
-                    {
-                     a  = Char.IsWhiteSpace(value[0]);
-
-                    }
-                    if (a==true)
-                    {
-                        Console.WriteLine("kecersiz password");
-                    }
-                    else
-                    {
-                     
-                       
-
-
-                    }
-                 
-
-
-
+                    _password= value;
                 }
                 else
                 {
-                    Console.WriteLine("Uzunlugu 8 den kicik ola bilmez");
+                    Console.WriteLine("Password duzgun qeyd olunmayb");
                 }
             
             }
@@ -67,7 +49,7 @@ namespace Acces_mod.Models
             Username = username;
             Password = password;
         }
-
+      
 
 
         //2. Uzunluğu 8-dən kiçik ola bilməz
@@ -75,28 +57,29 @@ namespace Acces_mod.Models
         //4. İçində ən az bir rəqəm olmalıdır
 
         //Üçüncü və dördüncü şərti ayrı bir private methodda yazıb gəlib propertyinin setində istifadə etmək lazım
-        private  void WhiteNUm(string password)
+        private  bool WhiteNUm(string password)
         {
+
             for (int i = 0; i < password.Length; i++)
             {
-                int d ;
-                bool a = char.IsWhiteSpace(password[i]);
+                bool d=false ;
+                bool a = char.IsUpper(password[i]);
                 bool b = char.IsNumber(password[i]);
                 if (a == true && b == true)
                 {
-                    d = 1;
+                    d = true; 
                 
-                    Console.WriteLine(d);
+        
                 }
                 else
                 {
-                    d = 2;
+                    d = false;
                 
-                    Console.WriteLine(d);
+                 
                 }
-
+               return d;
             }
-
+            return true;
 
 
 

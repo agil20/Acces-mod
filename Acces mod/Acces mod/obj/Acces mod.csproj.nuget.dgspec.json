@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\HomeWork\\Acces mod\\Acces mod\\Acces mod.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\Acces-modifa\\Acces mod\\Acces mod\\Acces mod.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\HomeWork\\Acces mod\\Acces mod\\Acces mod.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\Acces-modifa\\Acces mod\\Acces mod\\Acces mod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\HomeWork\\Acces mod\\Acces mod\\Acces mod.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Acces-modifa\\Acces mod\\Acces mod\\Acces mod.csproj",
         "projectName": "Acces mod",
-        "projectPath": "C:\\Users\\User\\Desktop\\HomeWork\\Acces mod\\Acces mod\\Acces mod.csproj",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\Acces-modifa\\Acces mod\\Acces mod\\Acces mod.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\HomeWork\\Acces mod\\Acces mod\\obj\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\Acces-modifa\\Acces mod\\Acces mod\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
